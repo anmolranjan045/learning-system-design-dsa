@@ -22,6 +22,19 @@ class Rectangle(Shape):
     def perimeter(self):
         print(f'Perimeter is {2 * self.length * self.breadth}')
         
-        
+class Circle(Shape):
+    __pi : float = 3.14
+    def __init__(self, radius: float) -> None:
+        self.radius = radius
+     
+    def area(self) -> None:
+        print(f'The area of the circle is {self.__pi * self.radius * self.radius}')
+    
+    def perimeter(self) -> None:
+        print(f'Perimeter of the circle is {2 * self.__pi * self.radius}')
+
 rec = Rectangle(2, 10)
-shape = Shape()
+circle = Circle(7)
+
+circle.area()
+# shape = Shape()
